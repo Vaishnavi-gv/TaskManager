@@ -35,6 +35,7 @@ app.use('/api/projects', projectRoutes);
 app.use('/api/projects/:projectId/tasks', taskRoutes);
 
 const clientDist = path.join(__dirname, '../../client/dist');
+console.log("Serving frontend from:", clientDist);
 app.use(express.static(clientDist));
 app.get('*', (req, res, next) => {
   if (req.path.startsWith('/api')) {
