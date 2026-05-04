@@ -4,10 +4,6 @@ Full-stack web app for **projects**, **team members**, and **tasks** with **role
 
 **Stack:** React (Vite) · Node.js · Express · MongoDB (Mongoose)
 
-## Live demo
-
-Deploy to **Railway** (or any Node host) and set the environment variables below. Your **Live URL** is the public URL of the service that runs `npm start` (single service can serve the API and the built React app).
-
 ## Features
 
 - **Auth:** Register, login, JWT sessions, protected API routes
@@ -32,7 +28,7 @@ Deploy to **Railway** (or any Node host) and set the environment variables below
 1. **Clone and install**
 
    ```bash
-   git clone <your-repo-url>
+   git clone https://github.com/Vaishnavi-gv/TaskManager
    cd TaskManager
    ```
 
@@ -64,7 +60,7 @@ Deploy to **Railway** (or any Node host) and set the environment variables below
 
 > **Note:** `dotenv` loads `.env` from the **current working directory**. If you start the server with `cd server && node src/index.js`, place `.env` in `server/` or export variables in the shell. The root `npm start` runs from the repo root, so a `.env` in the **repository root** is appropriate for production-style local runs.
 
-## Production build (same as CI / Railway)
+## Production build 
 
 From the **repository root**:
 
@@ -77,7 +73,7 @@ This installs client dependencies, builds `client/dist`, installs server depende
 
 ## Deploy on Railway
 
-1. Create a **new project** and add a **MongoDB** service (or use **MongoDB Atlas** and copy the connection string).
+1. Create a **new project** and add a **MongoDB** service.
 2. Add a **Node** service from this GitHub repo.
 3. **Build command:** `npm run build` (or leave empty if Nixpacks runs `npm install` + `npm run build` from `package.json`).
 4. **Start command:** `npm start`
@@ -115,11 +111,4 @@ If the browser and API share the same origin (one Railway URL), you do not need 
 | `PATCH`| `/api/projects/:projectId/tasks/:taskId` | Update task |
 | `DELETE`| `/api/projects/:projectId/tasks/:taskId` | Delete task |
 | `GET`  | `/api/health` | Health check |
-
-## Submission checklist (assignment)
-
-- [ ] **Live URL** – Railway (or other) public URL  
-- [ ] **GitHub repo** – push this project  
-- [ ] **README** – this file  
-- [ ] **2–5 min demo video** – walk through signup, project, members, tasks, dashboard  
 
