@@ -70,8 +70,9 @@ try {
 
 connectDb(mongoUri)
   .then(() => {
-    app.listen(PORT, () => {
-      console.log(`Server listening on port ${PORT}`);
+    const host = process.env.HOST || '0.0.0.0';
+    app.listen(PORT, host, () => {
+      console.log(`Server listening on http://${host}:${PORT}`);
     });
   })
   .catch((e) => {
