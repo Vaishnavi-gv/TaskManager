@@ -34,10 +34,9 @@ Deploy to **Railway** (or any Node host) and set the environment variables below
    ```bash
    git clone <your-repo-url>
    cd TaskManager
-   cp .env.example .env
    ```
 
-2. **Configure `.env` in the project root** (or only `server/` if you prefer; the server loads `dotenv` from the current working directory—see note below)
+2. **Configure `.env` in the project root** 
 
    - `MONGODB_URI` – MongoDB connection string  
    - `JWT_SECRET` – long random string for signing tokens  
@@ -124,6 +123,3 @@ If the browser and API share the same origin (one Railway URL), you do not need 
 - [ ] **README** – this file  
 - [ ] **2–5 min demo video** – walk through signup, project, members, tasks, dashboard  
 
-## License
-
-MIT — use freely for your portfolio and coursework.
